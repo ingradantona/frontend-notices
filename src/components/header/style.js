@@ -8,6 +8,10 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 900px) {
+    gap: 30px;
+
+  }
 `;
 
 export const DivLogo = styled.div`
@@ -19,6 +23,14 @@ export const DivLogo = styled.div`
     font-size: 20px;
     font-family: "Poppins", sans-serif;
     color: ${(props) => props.theme.colors.grey0};
+  }
+
+  @media screen and (max-width: 900px) {
+    gap: 10px;
+
+    & > p {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -47,7 +59,7 @@ export const ButtonTheme = styled.button`
   border-radius: 20px;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  color: #F8F9FA;
+  color: #f8f9fa;
   background-color: ${(props) => props.theme.colors.emphasis0};
   border: none;
   display: flex;
@@ -60,6 +72,13 @@ export const ButtonTheme = styled.button`
   &:hover {
     transform: scale(1.1);
     transition: 1s;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 15px;
   }
 `;
 
@@ -89,6 +108,23 @@ export const FormSearch = styled.form`
     padding: 5px;
     cursor: pointer;
   }
+  @media screen and (max-width: 900px) {
+    gap: 10px;
+
+    & > label {
+    font-size: 15px;
+    }
+
+    & > select{
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    & > label {
+      display: none;
+    };
+  }
+  
 `;
 
 export const Line = styled.div`
@@ -105,4 +141,11 @@ export const Title = styled.h1`
   font-size: 120px;
   font-family: "Roboto", sans-serif;
   color: ${(props) => props.theme.colors.grey0};
+  @media screen and (max-width: 900px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 40px;
+  }
+
 `;

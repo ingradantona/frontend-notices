@@ -32,10 +32,28 @@ export const Main = styled.main`
   }
 
   & > p {
-      font-size: 16px;
-      font-family: "Poppins", sans-serif;
-      color: ${(props) => props.theme.colors.grey0};
-      line-height: 24px;
-      text-align: justify;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: ${(props) => props.theme.colors.grey0};
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 900px) {
+    & > img {
+      height: 300px;
     }
+  }
+
+  & > h2 {
+    font-size: 30px;
+  }
+
+  & > div > span {
+    font-size: 12px;
+  }
+
+  & > p {
+    font-size: 16px;
+  }
 `;

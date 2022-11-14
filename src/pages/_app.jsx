@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
       <NewsContextProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </NewsContextProvider>
     </ThemeContextProvider>
   );

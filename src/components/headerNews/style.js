@@ -20,6 +20,14 @@ export const DivLogo = styled.div`
     font-family: "Poppins", sans-serif;
     color: ${(props) => props.theme.colors.grey0};
   }
+
+  @media screen and (max-width: 900px) {
+    gap: 10px;
+
+    & > p {
+      font-size: 15px;
+    }
+  }
 `;
 
 export const Logo = styled.div`
@@ -60,6 +68,12 @@ export const ButtonTheme = styled.button`
   &:hover {
     transform: scale(1.1);
     transition: 1s;
+  }
+  @media screen and (max-width: 900px) {
+    width: 80px;
+    height: 26px;
+    border-radius: 15px;
+    font-size: 15px;
   }
 `;
 
@@ -102,5 +116,15 @@ export const ButtonBack = styled.button`
   &:hover {
     transform: scale(1.1);
     transition: 1s;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    
+    & > a{
+      font-size: 15px;
+    }
   }
 `;

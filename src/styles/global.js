@@ -31,8 +31,8 @@ export const Global = createGlobalStyle`
         margin: 0px 75px 0px 75px;
         line-height: 1;
         font-family: 'Poppins', sans-serif;
-        background-color: ${props => props.theme.colors.grey1};
-        color: ${props => props.theme.colors.grey0};
+        background-color: ${(props) => props.theme.colors.grey1};
+        color: ${(props) => props.theme.colors.grey0};
     }
     article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {
@@ -53,4 +53,9 @@ export const Global = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
+    @media screen and (max-width: 600px) {
+        body {
+        margin: 0px 15px 0px 15px;
+    }
+  }
 `;

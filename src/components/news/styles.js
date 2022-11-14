@@ -69,4 +69,33 @@ export const CardNews = styled.li`
       text-align: justify;
     }
   }
+
+  @media screen and (max-width: 900px) {
+    & > div {
+      & > h2 {
+        font-size: 25px;
+      }
+
+      & > p {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    & > a > img {
+      width: 180px;
+    }
+    & > div {
+      & > h2 {
+        font-size: 22px;
+      }
+
+      & > p {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+  }
 `;
