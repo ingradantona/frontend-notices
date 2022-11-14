@@ -1,7 +1,11 @@
 import { CardNews, MainNews } from "./styles";
 import Link from "next/link";
+import { useContext } from "react";
+import { NewsContext } from "../../context/newsContext";
 
-const News = ({ news }) => {
+const News = () => {
+
+  const { news } = useContext(NewsContext);
   const setNews = (event) => {
     window.localStorage.setItem("NetNews", event.target.id);
   };

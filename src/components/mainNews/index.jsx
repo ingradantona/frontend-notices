@@ -7,7 +7,7 @@ const MainNews = ({ news }) => {
             <h2>{news.title}</h2>
             <div>
                 <span>Escrito por: {news.author}</span>
-                <span>{news.date.split(" ")[0]}</span>
+                <span>{news.date.split(" ")[0]} às {news.date.split(" ")[1]}</span>
             </div>
             <p>{news.description}</p>
         </Main>

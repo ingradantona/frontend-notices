@@ -1,11 +1,14 @@
+import { NewsContextProvider } from "../context/newsContext";
 import { ThemeContextProvider } from "../context/themeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
-      <Component {...pageProps} />;
+      <NewsContextProvider>
+        <Component {...pageProps} />;
+      </NewsContextProvider>
     </ThemeContextProvider>
-  )
+  );
 }
 
 export default MyApp;
