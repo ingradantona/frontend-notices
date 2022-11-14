@@ -1,11 +1,20 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/themeContext";
 import Header from "../components/header";
 import News from "../components/news";
+import { DarkTheme, LigthTheme } from "../styles/theme";
+import { ThemeProvider } from "styled-components";
+import { Global } from "../styles/global";
 
 export default function Home({ news }) {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
-      <Header />
-      <News news={news}/>
+      <ThemeProvider theme={theme === "ligth" ? LigthTheme : DarkTheme}>
+        <Global />
+        <Header />
+        <News news={news} />
+      </ThemeProvider>
     </>
   );
 }

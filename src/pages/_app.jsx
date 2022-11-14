@@ -1,14 +1,11 @@
-import { ThemeProvider } from "styled-components"
-import { Global } from "../styles/global"
-import { DarkTheme } from "../styles/theme"
+import { ThemeContextProvider } from "../context/themeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={DarkTheme}>
-    <Component {...pageProps} />
-    <Global/>
-    </ThemeProvider>
+    <ThemeContextProvider>
+      <Component {...pageProps} />;
+    </ThemeContextProvider>
   )
 }
 
-export default MyApp
+export default MyApp;

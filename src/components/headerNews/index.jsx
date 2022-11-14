@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
 import {
@@ -8,9 +9,10 @@ import {
   FormSearch,
   Line,
   Title,
+  ButtonBack,
 } from "./style";
 
-const Header = () => {
+const HeaderNews = () => {
   const {theme, changeTheme} = useContext(ThemeContext)
 
   return (
@@ -24,21 +26,13 @@ const Header = () => {
           <p>Bem vindo!</p>
           <ButtonTheme onClick={changeTheme}>{theme}</ButtonTheme>
         </DivLogo>
-        <FormSearch>
-          <label>Sobre o que você quer ler hoje?</label>
-          <select>
-            <option value="all">Tudo um pouco...</option>
-            <option value="films">Filmes</option>
-            <option value="music">Músicas</option>
-            <option value="artists">Artistas</option>
-          </select>
-        </FormSearch>
+        <ButtonBack>
+          <Link href={`/`}>Voltar</Link>
+        </ButtonBack>
       </HeaderStyled>
-      <Line />
-      <Title>NET NEWS</Title>
       <Line />
     </>
   );
 };
 
-export default Header;
+export default HeaderNews;

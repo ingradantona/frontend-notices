@@ -47,7 +47,7 @@ export const ButtonTheme = styled.button`
   border-radius: 20px;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  color: #F8F9FA;
+  color: #f8f9fa;
   background-color: ${(props) => props.theme.colors.emphasis0};
   border: none;
   display: flex;
@@ -60,34 +60,6 @@ export const ButtonTheme = styled.button`
   &:hover {
     transform: scale(1.1);
     transition: 1s;
-  }
-`;
-
-export const FormSearch = styled.form`
-  display: flex;
-  align-items: center;
-  gap: 30px;
-
-  & > label {
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    color: ${(props) => props.theme.colors.grey0};
-  }
-
-  & > select {
-    width: 190px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    color: ${(props) => props.theme.colors.grey3};
-    background-color: ${(props) => props.theme.colors.grey2};
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    cursor: pointer;
   }
 `;
 
@@ -105,4 +77,30 @@ export const Title = styled.h1`
   font-size: 120px;
   font-family: "Roboto", sans-serif;
   color: ${(props) => props.theme.colors.grey0};
+`;
+
+export const ButtonBack = styled.button`
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: ${(props) => props.theme.colors.emphasis0};
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 3px 21px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 1s;
+
+  & a {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #f8f9fa;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
 `;

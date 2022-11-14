@@ -12,7 +12,7 @@ export const MainNews = styled.main`
 `;
 
 export const CardNews = styled.li`
-  width: 600px;
+  width: 550px;
   height: 280px;
   padding: 20px;
   border-radius: 10px;
@@ -22,20 +22,19 @@ export const CardNews = styled.li`
   gap: 20px;
   background-color: ${(props) => props.theme.colors.grey2};
   box-shadow: 5px 3px 21px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: 1s;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: 1s;
   }
 
-  & > img {
+  & > a > img {
     height: 240px;
     width: 285px;
     border-radius: 10px;
     box-shadow: 5px 3px 21px 0px rgba(0, 0, 0, 0.25);
     object-fit: cover;
+    cursor: pointer;
   }
 
   & > div {
@@ -63,11 +62,11 @@ export const CardNews = styled.li`
     }
 
     & > p {
-        font-size: 16px;
-        font-family: "Poppins", sans-serif;
-        color: ${(props) => props.theme.colors.grey0};
-        line-height: 20px;
-        text-align: justify;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      color: ${(props) => props.theme.colors.grey0};
+      line-height: 20px;
+      text-align: justify;
     }
   }
 `;

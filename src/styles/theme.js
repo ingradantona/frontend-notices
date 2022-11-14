@@ -19,7 +19,7 @@ export const LigthTheme = {
 
     grey0: "#212529",
     grey1: "#F8F9FA",
-    grey2: "#272C31",
+    grey2: "#F1F1F1",
     grey3: "#6C757D",
   },
 };
